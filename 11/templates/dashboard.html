@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Dashboard</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+        <script src="{{ url_for('static', filename='scripts.js') }}" defer></script>
+</head>
+<body>
+    <h1>Course Selection</h1>
+    <form method="POST" action="{{ url_for('select_course') }}">
+        <label for="course_id">Course:</label>
+        <select name="course_id">
+            {% for course in courses %}
+                <option value="{{ courses.course_id }}">{{ course.course_name }}</option>
+            {% endfor %}
+        </select><br>
+
+        <label for="teacher_id">Teacher:</label>
+        <select name="teacher_id">
+            {% for course in courses %}
+                <option value="{{ course.teacher.teacher_id }}">{{ course.teacher.name }} (Rating: {{ course.teacher.rating }})</option>
+            {% endfor %}
+        </select><br>
+
+        <label for="semester">Semester:</label>
+        <input type="text" name="semester" required><br>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

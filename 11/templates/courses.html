@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Available Courses</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Available Courses</h1>
+    </header>
+    <main>
+        <h2>Select Your Courses</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Course ID</th>
+                    <th>Course Name</th>
+                    <th>Credits</th>
+                    <th>Instructor</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>101</td>
+                    <td>Computer Science</td>
+                    <td>3</td>
+                    <td>Dr. Smith</td>
+                </tr>
+                <tr>
+                    <td>102</td>
+                    <td>Mathematics</td>
+                    <td>4</td>
+                    <td>Prof. Johnson</td>
+                </tr>
+                <tr>
+                    <td>103</td>
+                    <td>Physics</td>
+                    <td>4</td>
+                    <td>Dr. Brown</td>
+                </tr>
+                <tr>
+                    <td>104</td>
+                    <td>Chemistry</td>
+                    <td>3</td>
+                    <td>Dr. White</td>
+                </tr>
+            </tbody>
+        </table>
+        <button onclick="alert('Courses Selected!')">Submit Selection</button>
+    </main>
+    <footer>
+        <p>&copy; 2024 Course Selection System</p>
+    </footer>
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+</body>
+</html>
